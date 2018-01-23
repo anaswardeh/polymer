@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="whose-flag">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `whose-flag`
+     * Match flags to their countries!
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class WhoseFlag extends Polymer.Element {
+      static get is() { return 'whose-flag'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'whose-flag'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(WhoseFlag.is, WhoseFlag);
+  </script>
+</dom-module>
